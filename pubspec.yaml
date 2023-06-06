@@ -1,7 +1,7 @@
 name: paladinsportal
 description: A new Flutter project.
 publish_to: "none"
-version: 0.1.0+3
+version: 1.0.0+4
 
 environment:
   sdk: ">=2.19.6 <3.0.0"
@@ -15,6 +15,7 @@ dependencies:
   horizontal_data_table: ^4.2.0
   http: ^0.13.6
   intl: ^0.18.1
+  new_version: ^0.3.1
   shared_preferences: ^2.1.1
 
 dev_dependencies:

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:new_version/new_version.dart';
 import '/classes/rankedleaderboard.dart';
 import '/pages/suggestionpage.dart';
 import '/pages/toprankedpage.dart';
@@ -15,8 +16,8 @@ class Home extends StatelessWidget {
   final _tab1navigatorKey = GlobalKey<NavigatorState>();
   final _tab2navigatorKey = GlobalKey<NavigatorState>();
   final _tab3navigatorKey = GlobalKey<NavigatorState>();
-
   final _tab4navigatorKey = GlobalKey<NavigatorState>();
+  final newVersion = NewVersion();
 
   Home({Key? key, required this.sessionid}) : super(key: key);
 
@@ -46,6 +47,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    newVersion.showAlertIfNecessary(context: context);
     return PersistentBottomBarScaffold(
       items: [
         PersistentTabItem(

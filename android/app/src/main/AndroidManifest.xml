@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.edo09.paladinsportal">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="paladinsportal"
         android:name="${applicationName}"
