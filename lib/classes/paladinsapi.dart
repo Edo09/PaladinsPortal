@@ -6,6 +6,7 @@ import 'dart:convert';
 
 import 'package:crypto/crypto.dart';
 import 'package:intl/intl.dart';
+import 'package:paladinsportal/classes/paladinsapidata.dart';
 import '/classes/getchampions.dart';
 import '/classes/getidsbygamertag.dart';
 import '/classes/playerloadouts.dart';
@@ -18,9 +19,7 @@ import 'matchdetails.dart';
 import 'matchhistory.dart';
 import 'player.dart';
 
-class PaladinsApi {
-  String devId = "3689";
-  String authId = "0C8F72200C284878AF806B2ABD05BCFF";
+class PaladinsApi extends PaladinsApiData {
   String apiUrl = 'https://api.paladins.com/paladinsapi.svc';
   final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
 
