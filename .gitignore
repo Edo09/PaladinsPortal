@@ -45,4 +45,4 @@ app.*.map.json
 
 
 #Privacy related
-lib/classes/paladinsapidata.dart
+/lib/classes/paladinsapidata.dart
