@@ -175,6 +175,9 @@ class LookForDeckState extends State<LookForDeck> {
                                   opacity: _selectedImageIndex == index ? 0.6 : 1,
                                   child: Image.network(
                                     snapshot.data![index].championIconUrl,
+                                    errorBuilder: (context, error, stackTrace) {
+                                      return Image.asset('assets/noprofile.png');
+                                    },
                                   ),
                                 ),
                               ),

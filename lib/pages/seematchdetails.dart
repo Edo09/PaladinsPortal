@@ -29,32 +29,7 @@ class SeeMatchDetailsState extends State<SeeMatchDetails> {
 
       final List<MatchDetails> matchDetails =
           await PaladinsApi().getMatchDetails(matchId, prefs.getString('sessionid').toString());
-/*
-      var groups = groupBy(matchDetails, (MatchDetails person) => person.partyId);
 
-      var peopleWithSameAge = groups.entries.where((entry) => entry.value.length > 1);
-      print(peopleWithSameAge);*/
-
-      Map<int, int> partyCount = {};
-      int digitCount = 1;
-      List<int> partiesId = [];
-
-      for (int i = 0; i < matchDetails.length; i++) {
-        int partyId = matchDetails[i].partyId;
-
-        partiesId = [matchDetails[i].partyId];
-
-        //Verifica dentro del mapa si ya existe ese partyID
-        if (partyCount.containsKey(partyId)) {
-          //Si no existe lo agrega y aumenta el counter
-          partyCount[partyId] = digitCount;
-          digitCount++;
-        }
-        
-
-        //REALMENTE NO ES NECESEARIO EL MODULAR
-        matchDetails[i].partyId = (partyCount[partyId]! % 10);
-      }
       return matchDetails;
     }
 
