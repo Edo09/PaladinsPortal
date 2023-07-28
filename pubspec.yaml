@@ -1,7 +1,7 @@
 name: paladinsportal
 description: A new Flutter project.
 publish_to: "none"
-version: 1.0.0+4
+version: 1.0.0+6
 
 environment:
   sdk: ">=2.19.6 <3.0.0"
@@ -16,6 +16,7 @@ dependencies:
   http: ^0.13.6
   intl: ^0.18.1
   shared_preferences: ^2.1.1
+  upgrader: ^6.5.0
 
 dev_dependencies:
   flutter_test:
@@ -27,7 +28,7 @@ flutter_launcher_icons:
   android: true
   ios: true
   image_path: "assets/paladinsportalicon.png"
-  min_sdk_android: 21 # android min sdk min:16, default 21
+  min_sdk_android: 16 # android min sdk min:16, default 21
 
 flutter:
   uses-material-design: true

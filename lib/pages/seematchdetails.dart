@@ -65,7 +65,7 @@ class SeeMatchDetailsState extends State<SeeMatchDetails> {
         ),
         body: Container(
           padding: const EdgeInsets.only(bottom: 10),
-          color: Color.fromARGB(39, 202, 220, 224),
+          color: const Color.fromARGB(39, 202, 220, 224),
           child: FutureBuilder(
             future: setMatchDetails(match['matchid'].toString()),
             builder: (context, snapshot) {

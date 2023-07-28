@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:upgrader/upgrader.dart';
 
 import '/classes/paladinsapi.dart';
 
@@ -30,8 +31,10 @@ Future<void> main() async {
         ),
       ),
       routes: {
-        '/': (context) => Home(
-              sessionid: sessionllave,
+        '/': (context) => UpgradeAlert(
+              child: Home(
+                sessionid: sessionllave,
+              ),
             ),
       },
     ),
